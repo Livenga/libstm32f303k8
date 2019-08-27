@@ -22,7 +22,8 @@ get_unique_device_id(void) {
   p_str = (char *)_hex_unique_device_id;
 
 
-  xmemset((void *)_hex_unique_device_id, '\0', sizeof(uint8_t) * 32);
+  //xmemset((void *)_hex_unique_device_id, '\0', sizeof(uint8_t) * 32);
+  memset((void *)_hex_unique_device_id, '\0', sizeof(uint8_t) * 32);
 
 
   for(i = 0; i < 3; ++i) {

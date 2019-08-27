@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 
-extern void *
-xmemset(void *p, int8_t c, size_t size);
+//extern void *
+//xmemset(void *p, int8_t c, size_t size);
 
 #endif
