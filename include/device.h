@@ -8,4 +8,9 @@
 
 #define FLASH_SIZE_DATAR       ((volatile void *)0x1ffff7cc)
 
+/* src/device.c */
+// デバイスの固有IDをHex文字列で取得
+extern uint8_t *
+get_unique_device_id(void);
+
 #endif

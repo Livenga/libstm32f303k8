@@ -21,10 +21,11 @@ get_unique_device_id(void) {
   char *p_str;
   p_str = (char *)_hex_unique_device_id;
 
-
-  //xmemset((void *)_hex_unique_device_id, '\0', sizeof(uint8_t) * 32);
-  memset((void *)_hex_unique_device_id, '\0', sizeof(uint8_t) * 32);
-
+  while(*p_str) {
+    *p_str++ = '\0';
+  }
+  p_str = (char *)_hex_unique_device_id;
+  //memset((void *)_hex_unique_device_id, '\0', sizeof(uint8_t) * 32);
 
   for(i = 0; i < 3; ++i) {
     uint32_t _val = *(UNIQUE_DEVICE_IDR + i);
