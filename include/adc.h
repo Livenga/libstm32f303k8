@@ -74,6 +74,7 @@ struct _adc_t {
 
 struct _adc_common_t {
   __RO uint32_t CSR;
+  __RO uint32_t reserved;
   __IO uint32_t CCR;
   __RO uint32_t CDR;
 };
