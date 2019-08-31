@@ -15,9 +15,11 @@ CPU = cortex-m4
 ARM_OPTIONS =
 ARM_OPTIONS += -mcpu=$(CPU)
 ARM_OPTIONS += -mtune=$(CPU)
-#ARM_OPTIONS += -march=armv7-a
+ARM_OPTIONS += -march=armv7e-m
 ARM_OPTIONS += -mfloat-abi=softfp
 ARM_OPTIONS += -mfpu=fpv4-sp-d16
+ARM_OPTIONS += -mthumb
+ARM_OPTIONS += -msoft-float
 
 default:
 	[ -d  $(OBJDIR)   ] || mkdir -v $(OBJDIR)
@@ -29,8 +31,9 @@ $(PRJC):$(OBJS)
 
 $(OBJDIR)/%.o:%.c
 	$(CC) -o $@ -c $< \
-		$(ARM_OPTIONS) \
-		-O2
+		-T ../stm32f303k8.ld \
+		-specs=nosys.specs \
+		$(ARM_OPTIONS)
 
 clean:
 	[ ! -d $(PRJC) ] || rm -v libstm32f303.a
