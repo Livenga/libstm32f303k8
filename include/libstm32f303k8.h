@@ -16,5 +16,7 @@
 #include "usart.h"
 #include "tim1_8_20.h"
 
+#include "system_control_block.h"
+#include "fpu.h"
 
 #endif
