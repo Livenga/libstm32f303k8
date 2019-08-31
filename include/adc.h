@@ -129,6 +129,10 @@ struct _adc_common_t {
 #define ADC_CR_ADDIS    (0x00000002)
 #define ADC_CR_ADEN     (0x00000001)
 
+#define ADC_CR_ADVREGEN_INTERMEDIATE (0x00000000)
+#define ADC_CR_ADVREGEN_ENABLE       (0x10000000)
+#define ADC_CR_ADVREGEN_DISABLE      (0x20000000)
+
 
 /** ADC configuration register(ADCx_CFGR, x=1..4)
  * Offset: 0x0C
@@ -355,6 +359,11 @@ struct _adc_common_t {
 #define ADC_CCR_DMACFG (0x00002000)
 #define ADC_CCR_DELAY  (0x00000f00)
 #define ADC_CCR_DUAL   (0x0000001f)
+
+#define ADC_CCR_CKMODE_CK_ADCX    (0x00000000)
+#define ADC_CCR_CKMODE_HCLK_PER_1 (0x00010000)
+#define ADC_CCR_CKMODE_HCLK_PER_2 (0x00020000)
+#define ADC_CCR_CKMODE_HCLK_PER_4 (0x00030000)
 
 
 /** ADC common regular data register for dual mode(ADCx_CDR, x = 12 or 34)
