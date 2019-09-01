@@ -117,4 +117,33 @@ struct _gpio_t {
 #define GPIO_OSPEEDR_OSPEEDR2  (0x00000030)
 #define GPIO_OSPEEDR_OSPEEDR1  (0x0000000c)
 #define GPIO_OSPEEDR_OSPEEDR0  (0x00000003)
+
+
+/** GPIO alternate function low register(GPIOx_AFRL)
+ * Offset: 0x20
+ * Reset value: 0x0000 0000
+ */
+#define GPIO_AFRL_AFR7 (0xf0000000)
+#define GPIO_AFRL_AFR6 (0x0f000000)
+#define GPIO_AFRL_AFR5 (0x00f00000)
+#define GPIO_AFRL_AFR4 (0x000f0000)
+#define GPIO_AFRL_AFR3 (0x0000f000)
+#define GPIO_AFRL_AFR2 (0x00000f00)
+#define GPIO_AFRL_AFR1 (0x000000f0)
+#define GPIO_AFRL_AFR0 (0x0000000f)
+
+
+/** GPIO alternate function high register(GPIOx_AFRH)
+ * Offset: 0x24
+ * Reset value: 0x0000 0000
+ */
+#define GPIO_AFRH_AFR15 (0xf0000000)
+#define GPIO_AFRH_AFR14 (0x0f000000)
+#define GPIO_AFRH_AFR13 (0x00f00000)
+#define GPIO_AFRH_AFR12 (0x000f0000)
+#define GPIO_AFRH_AFR11 (0x0000f000)
+#define GPIO_AFRH_AFR10 (0x00000f00)
+#define GPIO_AFRH_AFR9  (0x000000f0)
+#define GPIO_AFRH_AFR8  (0x0000000f)
+
 #endif
