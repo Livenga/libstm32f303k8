@@ -14,7 +14,7 @@ CPU = cortex-m4
 
 ARM_OPTIONS =
 ARM_OPTIONS += -T ../stm32f303k8.ld
-ARM_OPTIONS += -specs=nano.specs
+ARM_OPTIONS += -specs=nosys.specs
 ARM_OPTIONS += -mcpu=$(CPU)
 ARM_OPTIONS += -mtune=$(CPU)
 ARM_OPTIONS += -march=armv7e-m
