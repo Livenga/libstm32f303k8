@@ -33,7 +33,7 @@ struct _fpu_t {
 
 #define FPU_CPACR_CP_ACCESS_DENIED     (0b00)
 #define FPU_CPACR_CP_PRIVILEGED_ACCESS (0b01)
-#define FPU_CPACR_CP_FULL_ACCESS       (0b10)
+#define FPU_CPACR_CP_FULL_ACCESS       (0b11)
 
 
 /** Floating-point Context Control Register
