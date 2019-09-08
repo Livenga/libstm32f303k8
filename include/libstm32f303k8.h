@@ -14,6 +14,7 @@
 #include "rcc.h"
 #include "rtc.h"
 #include "usart.h"
+#include "spi.h"
 #include "tim1_8_20.h"
 
 #include "system_control_block.h"
