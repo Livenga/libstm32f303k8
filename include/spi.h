@@ -5,8 +5,8 @@
 #include "io.h"
 
 
-#define SPI1_ADDRESS ((void *)0x40013000)
-#define SPI1 ((spi_t volatile *)SPI1_ADDRESS)
+#define SPI1_ADDRESS ((volatile void *)0x40013000)
+#define SPI1 ((spi_t *)SPI1_ADDRESS)
 
 
 typedef struct _spi_t spi_t;
